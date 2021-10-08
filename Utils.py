@@ -40,9 +40,6 @@ def convert_bin_to_image(pathRead,width):
         g = g.resize((width,width));
         g = np.array(g)
         return g
-        # f = open(pathSave,"wb")
-        # pickle.dump(g,f)
-        # f.close()
     except:
         print("Error")
 
@@ -100,7 +97,6 @@ def convert_bin_to_HexDump2bytes(pathRead):
         print("Error")
 
 def convert_bin_to_HexDump2bytes_hashed(pathRead,size=1024):
-    # try:
         fh = open(pathRead, 'rb')
         hexdump = list(fh.read())
         twoBytesHexDump = {}
@@ -115,7 +111,6 @@ def convert_bin_to_HexDump2bytes_hashed(pathRead,size=1024):
 
 
 def convert_bin_to_HexDumpNbytes_hashed(pathRead,N=3,size=1024):
-    # try:
         fh = open(pathRead, 'rb')
         hexdump = list(fh.read())
         NBytesHexDump = {}
@@ -134,7 +129,6 @@ def convert_bin_to_HexDumpNbytes_hashed(pathRead,N=3,size=1024):
 
 
 def convert_bin_to_String_Rep(pathRead):
-    # try:
     r2 = r2pipe.open(pathRead, flags=['-2'])
     r2.cmd("aaa")
 
@@ -184,7 +178,6 @@ def convert_bin_to_String_Rep(pathRead):
 
 
 def convert_bin_to_Relocs_Rep(pathRead):
-    # try:
     r2 = r2pipe.open(pathRead, flags=['-2'])
     r2.cmd("aaa")
 
@@ -227,7 +220,6 @@ def convert_bin_to_Relocs_Rep(pathRead):
 
 
 def convert_bin_to_Sections_Rep(pathRead):
-    # try:
     r2 = r2pipe.open(pathRead, flags=['-2'])
     r2.cmd("aaa")
 
@@ -268,7 +260,6 @@ def convert_bin_to_Sections_Rep(pathRead):
     return set(fs_count_size.keys())
 
 def convert_bin_to_Functions_Rep(pathRead):
-    # try:
     r2 = r2pipe.open(pathRead, flags=['-2'])
     r2.cmd("aaa")
 
@@ -307,7 +298,6 @@ def convert_bin_to_Functions_Rep(pathRead):
 def convert_bin_to_Imports_Rep(pathRead):
     r2 = r2pipe.open(pathRead, flags=['-2'])
     r2.cmd("aaa")
-    # st = r2.cmdj("fs imports; fj")
     st = r2.cmd("fs imports; fj")
 
     while True:
