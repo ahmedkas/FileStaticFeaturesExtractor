@@ -2,7 +2,7 @@ import sys
 sys.path.append(".")
 from Utils import *
 
-pathRead = "../data/02a9c1ddd9046c96ac1fcc98b0ea2b2a/02a9c1ddd9046c96ac1fcc98b0ea2b2a"
+pathRead = "EXAMPLE-SOFTWARE-BINARY-PATH" # The path to the binaries
 
 # Convert binaries to image representation
 img = convert_bin_to_image_height(pathRead,width=64,height=64)
